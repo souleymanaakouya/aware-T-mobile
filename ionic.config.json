@@ -1,0 +1,7 @@
+{
+  "name": "aware",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

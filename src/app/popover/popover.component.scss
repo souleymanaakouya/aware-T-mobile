@@ -1,0 +1,17 @@
+ion-list{
+    background-color: white;
+}
+
+ion-item {
+    // --background: linear-gradient( 135deg, #9442ca 10%, #08082b 100%);
+        // --background: linear-gradient( 135deg, #76ed42 10%, #38761d 100%);
+             --background: linear-gradient(90deg, var(--ion-color-success-shade) 0%, var(--ion-color-success-shade) 100%);
+
+}
+ion-item{
+    color: white;
+}
+
+ion-icon{
+    color: white;
+}

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+    
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <h6>
+
+        <strong class="mycolor" align="center">Creer un Etudiant</strong>
+      </h6>
+      
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" >
+
+  <div class="form ion-text-center">
+    <form [formGroup]="formPresence" (ngSubmit)='enregistrer()'>
+      <ion-list>
+        <ion-card>
+          <ion-item lines="none" >
+            <ion-input type="text"  placeholder="Entrez Votre nom" formControlName="name"></ion-input>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item lines="none">
+            <ion-input type="text" placeholder="Entrez Votre matricule" formControlName="matricule"></ion-input>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label>NIVEAU : </ion-label>
+            <ion-select interface="popover" formControlName="level_id" placeholder="Select One" *ngIf='hasLoadedLevels'>
+              <ion-select-option  *ngFor="let level of levels"  value={{level?.id}}>{{level?.name}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+        </ion-card>
+        <ion-button type='submit' expand="block" shape="round">ENREGISTRER</ion-button>
+      </ion-list>
+    </form>
+  </div>
+ 
+
+</ion-content>

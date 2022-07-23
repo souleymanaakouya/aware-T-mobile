@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div class="top_menu">
+        <div class="top_menu_text text-center">
+          <img alt="logo" id="header_logo" height="50" align="left" src="assets/att.jpg">
+          <img alt="logo" id="header_logo" height="50" align="right" src="assets/att.jpg">
+          <h2>
+            <strong>
+              AWARE-T
+            </strong>
+          </h2>
+        </div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+
+    <img class="img1" src="assets/logo.svg">
+  </div>
+
+  <div class="container">
+
+    <div class="form ion-text-center">
+      <h1>LOGIN</h1>
+
+      <form [formGroup]="formPresence" (ngSubmit)='login()' (ngSubmit)="submitForm()" novalidate>
+
+        <ion-item lines="none">
+          <ion-icon name="mail-outline" color="success"></ion-icon>
+          <ion-input type="email" placeholder="exemple@gmail.com" formControlName="email">
+          </ion-input>
+        </ion-item>
+        <span class="error ion-padding" class="couleur" *ngIf="isSubmitted && errorControl.email.errors?.required">
+          Verifiez votre Email !!!
+        </span>
+
+        <ion-item lines="none">
+          <ion-icon name="lock-closed-outline" color="success"></ion-icon>
+          <ion-input type="password" placeholder="votre mot de passe" formControlName="password"></ion-input>
+        </ion-item>
+        <span class="error ion-padding" class="couleur" *ngIf="isSubmitted && errorControl.password.errors?.required">
+          Verifiez votre mot de passe !!!
+        </span>
+
+
+        <ion-button type="submit" expand="block" shape="round">LOGIN</ion-button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</ion-content>

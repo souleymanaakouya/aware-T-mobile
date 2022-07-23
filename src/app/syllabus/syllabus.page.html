@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <strong class="mycolor" align="center">SYLLABUS</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formPresence">
+    <div cards>
+      <ion-card>
+        <ion-item>
+          <ion-label>NIVEAU : </ion-label>
+          <ion-select formControlName="level_id" interface="popover" placeholder="Select One" *ngIf='hasLoadedLevels'>
+            <ion-select-option *ngFor="let level of levels" value={{level?.id}}>{{level?.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card>
+    </div>
+    <!-- <div class="grid-full">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <img src="../../assets/logo.svg" routerLink="/profile" />
+            <p>{{cour?.name}}</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+            <img src="../../assets/logo.svg" />
+            <p>{{users.name}}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div> -->
+    <div class="grid-full">
+      <div cards>
+        <ion-row>
+          <ion-col>
+            <ion-card id="ion-card" *ngFor="let cour of possiblesCourses; let i = index">
+              <!-- <ion-card-content> -->
+              <!-- <img src="../../assets/qq.png"/> -->
+              <ion-item>
+                <ion-label>
+                  <h1 class="prima"> UE: {{cour?.name}} </h1>
+                  <p>TITRE : {{cour?.title}} </p>
+                  <h6> {{cour?.syllabus}} </h6>
+                </ion-label>
+              </ion-item>
+              <!-- </ion-card-content> -->
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <!-- <div class="sasa" id="ion-card" *ngFor="let cour of possiblesCourses; let i = index"> -->
+      <!-- <ion-card-content> -->
+      <!-- <img src="../../assets/qq.png"/> -->
+      <!-- <ion-item>
+          <ion-label routerLink="/mymodal">
+            <h1 class="prima"> UE: {{cour?.name}} </h1>
+            <h6>TITRE : {{cour?.title}} </h6>
+                        <p> {{cour?.syllabus}} </p>
+          </ion-label>
+        </ion-item> -->
+      <!-- </ion-card-content> -->
+      <!-- </div>
+      -->
+    </div>
+
+  </form>
+
+
+
+</ion-content>

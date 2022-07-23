@@ -1,0 +1,49 @@
+<ion-content>
+    <div class="ion-text-center">
+      <img class="img1" src="assets/logo.svg">
+    </div>
+
+  <div class="photo">
+    <ion-avatar>
+      <!-- <img [src]="image"> -->
+    </ion-avatar>
+  </div>
+
+
+  <div class="container">
+    <div class="form ion-text-center">
+
+
+    <!-- <h1>CREER UN COMPTE</h1> -->
+
+
+
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Entrez Votre nom" [(ngModel)]="data.name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="email" placeholder="exemple@gmail.com" [(ngModel)]="data.email" ></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Role : </ion-label>
+      <ion-select interface="popover" placeholder="Select One" [(ngModel)]="data.role">
+        <ion-select-option value="brown">Delegue</ion-select-option>
+        <ion-select-option value="blonde">Admin</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>NIVEAU : </ion-label>
+      <ion-select interface="popover" placeholder="Select One" *ngIf='hasLoadedLevels'>
+        <ion-select-option  *ngFor="let level of levels"  value={{level?.id}}>{{level?.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input type="password" placeholder="votre mot de passe" [(ngModel)]="data.password"></ion-input>
+    </ion-item>
+
+      <ion-button expand="block" shape="round" (click)="register()">ENREGISTRER</ion-button>
+              <ion-button expand="block" shape="round" (click)="direct()">GOTO</ion-button>
+  </div>
+ </div>
+</ion-content>

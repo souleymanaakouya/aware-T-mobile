@@ -1,0 +1,106 @@
+ion-content {
+    // --background: linear-gradient(135deg, #76ed42 10%, #38761d 100%);
+    --background: linear-gradient(90deg, var(--ion-color-success-shade) 0%, var(--ion-color-success-shade) 100%);
+
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        opacity: 1
+    }
+}
+
+@keyframes scale-in-ver-bottom {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        opacity: 1
+    }
+}
+
+.container {
+    -webkit-animation: scale-in-ver-bottom .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: scale-in-ver-bottom .5s cubic-bezier(.25, .46, .45, .94) both;
+    min-height: 300px;
+    // width: 276px;
+    background-color: white;
+    bottom: 0;
+    // position: absolute;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img1 {
+    height: 100px;
+    margin-top: 100px;
+}
+
+ion-button {
+    // --background: linear-gradient( 135deg, #76ed42 10%, #38761d 100%);
+    --background: linear-gradient(90deg, var(--ion-color-success-shade) 0%, var(--ion-color-success-shade) 100%);
+
+    margin-top: 10px;
+}
+
+.form {
+    padding: 10px;
+
+    ion-item {
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 2px;
+        border-color: grey;
+        margin-top: 10px;
+    }
+}
+
+.top_menu {
+    display: flex;
+}
+
+.top_menu_text {
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: #38761d;
+}
+
+.couleur {
+    color: red;
+}
+
+// ion-icon {}
+
+.couleur {
+    color: white;
+    position: fixed;
+}
+
+// h6{
+// text-align:center;
+// }

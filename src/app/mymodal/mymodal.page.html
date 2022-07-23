@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>mymodal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formPresence">
+  <div class="grid-full">
+    <div cards>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="openModal()" id="ion-card" *ngFor="let cour of cours; let i = index">
+            <!-- <ion-card-content> -->
+            <ion-item>
+              <ion-label routerLink="/mymodal">
+                <h1 class="prima"> TITRE: {{cour?.title}} </h1>
+                <p> {{cour?.syllabus}} </p>
+              </ion-label>
+            </ion-item>
+            <!-- </ion-card-content> -->
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="closeModal()" (click)="fermer()" expand="block" color="danger" fill="clear" shape="round">
+      <ion-icon slot="start" name="close"></ion-icon>
+      OK
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

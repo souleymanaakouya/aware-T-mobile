@@ -1,0 +1,29 @@
+<ion-content class="ion-padding" >
+  <div>
+    <ion-card>
+      <canvas #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button color="danger" (click)="clearPad()">Clear</ion-button>
+          </ion-col>
+          <ion-col size="4" offset="1.5">
+            <ion-button color="primary" (click)="savePad()">Save</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    </div>
+  <img src='{{ signatureImg }}' /> 
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="closeModal()" expand="block" color="danger" fill="clear" shape="round">
+      <ion-icon slot="start" name="close"></ion-icon>
+       Fermer      
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

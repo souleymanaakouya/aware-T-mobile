@@ -1,0 +1,27 @@
+.para{
+    display: flex;
+}
+ion-title{
+    position: center;
+    color: white;
+}
+
+ion-button{
+    // --background: linear-gradient( 135deg, #76ed42 10%, #38761d 100%);
+--background: linear-gradient(90deg, var(--ion-color-success-shade) 0%, var(--ion-color-success-shade) 100%);
+
+    margin-top: 10px;
+}
+
+.fermer{
+        --background: linear-gradient( 135deg, #ffffff 10%, #08082b 100%);
+    margin-top: 10px;
+}
+
+.my-custom-class{
+    background-color: #fff;
+}
+
+ion-icon{
+    color: red;
+}
